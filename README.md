@@ -1,6 +1,6 @@
 # EKS Loadouts
 
-A clean, powerful, and fully configurable loadout system for FiveM � designed for realism, flexibility, and ease of use.
+A clean, powerful, and fully configurable loadout system for FiveM! designed for realism, flexibility, and ease of use.
 
 ## Features
 
