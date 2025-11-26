@@ -1,45 +1,111 @@
 # EKS Loadouts
 
-A clean, powerful, and fully configurable loadout system for FiveM! designed for realism, flexibility, and ease of use.
+A polished, modern, and fully configurable loadout & armoury system for FiveM, featuring realistic weapon distribution, Discord role permissions, MP Ped armourers, and a clean category-based UI.
 
-## Features
+This system is built for high-quality roleplay servers that want complete control over weapons, attachments, permissions, and armoury locations.
 
-**Category-Based Menu**
-Create structured loadouts by department or division (for example: Police ? Firearms ? ARV Loadouts).
 
-**Fully Customizable Loadouts**
-Each loadout can include:
+## Main Features
 
-* Weapons
-* Ammo counts
-* Components (attachments)
-* Armour levels
-* Custom weapon labels and descriptions
+### Category-Based Loadout Menu
+Organise loadouts into divisions, departments, or unit trees  
+(e.g., **Police ? Firearms ? ARV Loadouts**).
 
-**Dynamic Attachments System**
-Add, remove, or modify weapon attachments using an in-game UI.
-Players can tick or untick attachments (flashlights, suppressors, scopes, etc.) and apply them instantly.
+### Customisable Loadouts
+Each loadout supports:
+- Weapons  
+- Ammo  
+- Attachments  
+- Armour  
+- Descriptions  
+- Loadout-specific permissions  
 
-**Client-Side Precision**
-Attachments are handled client-side for reliability, ensuring perfect syncing and instant visual updates.
+All loadouts are defined in `config.lua` - no database required.
 
-**Server-Safe Logic**
-The server still validates and dispatches loadouts, maintaining secure ownership handling.
+###  Discord Role Permissions (Badger_Discord_API)
+Loadouts can require one or more Discord roles.
 
-**Lightweight and Optimized**
-No database dependencies or unnecessary code. The entire system is config-driven and performance-safe.
+- If the player **has** the role -> loadout is usable  
+- If the player **does NOT** have the role -> Loadout still appears, but **is greyed out and cannot be selected**
+
+
+### Armoury System (Optional)
+Enable armouries with:
+
+- Multiple locations  
+- Separate loadouts per armoury  
+- ox_target or key-press interaction  
+- Optional map blips  
+- Per-armoury webhook logging  
+- Base ped or **fully custom MP Ped** armourers
+
+### Custom MP Ped Armourers
+When using an MP Ped armourer, you can configure:
+
+- Full head blend  
+- Eye colour  
+- Facial features  
+- All overlays (beard, eyebrows, ageing, sun damage, etc.)  
+- Hair style & colours  
+- ALL clothing components  
+- Props (hats, glasses, etc.)
+
+Perfect for immersive, character-specific armoury clerks.
+
+### Attachments Menu
+Players can open a dedicated attachments window:
+
+- Toggle weapon components  
+- Apply changes instantly  
+- Components update visually and reliably
+
+### Safe & Optimised
+- Client handles attachment logic  
+- Server validates and gives weapons  
+- Clean, readable structure  
+- No performance-heavy loops
+
+### Webhook Logging
+Armoury withdrawals can be logged to Discord with:
+- Player server ID  
+- Loadout selected  
+- Armoury location  
+- Timestamp
 
 ## Installation
 
-1. Drag and drop the folder into your `resources/` directory.
-2. Add the following line to your `server.cfg`:
+1. Drag the folder into your `resources/` directory.
+2. Add to your `server.cfg`:
 
-   ensure EKS_Loadouts
-   
-3. Edit `config.lua` to define your categories, loadouts, and attachment catalogs.
+ensure EKS_Loadout
+
+3. Configure everything in `config.lua`:
+
+   * Loadouts
+   * Categories
+   * Attachments
+   * Armoury locations
+   * Discord role permissions
+   * MP Ped appearance
+   * Webhook URL
+
+
+##  Dependencies
+
+**Required**
+
+* Badger_Discord_API - https://github.com/JaredScar/Badger_Discord_API
+
+**Optional**
+
+* ox_target (for armoury interaction)
+
 
 ## Support
 
-For support or to report issues, join our Discord and open a support ticket:
+Support is **not** provided in resource comments.
+For help, bug reports, or custom development:
 
 https://discord.gg/busQ9w6dqa
+
+© Echo Kilo Studios
