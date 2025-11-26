@@ -9,7 +9,7 @@ This system is built for high-quality roleplay servers that want complete contro
 
 ### Category-Based Loadout Menu
 Organise loadouts into divisions, departments, or unit trees  
-(e.g., **Police ? Firearms ? ARV Loadouts**).
+(e.g., **Police -> Firearms -> ARV Loadouts**).
 
 ### Customisable Loadouts
 Each loadout supports:
